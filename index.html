@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="https://cdn.pixabay.com/video/2021/08/09/84534-587770015_large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="birthdayMusic" loop>
+        <source src="chechiSong.mp4" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicBtn" aria-label="Toggle Music">
+        <svg class="music-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">🎉 Happy Birthday 🎉</h1>
+            <div class="profile-section">
+                <div class="profile-image-wrapper">
+                    <img src="./chechi.jpeg" 
+                         alt="Birthday Person" 
+                         class="profile-image" 
+                         id="profileImg">
+                    <div class="profile-ring"></div>
+                </div>
+                <h2 class="birthday-name" id="birthdayName">Chichiiiieeee</h2>
+            </div>
+            <p class="birthday-message">
+                Wishing you a day filled with happiness, laughter, and unforgettable moments! 
+                May all your dreams come true! 🎈✨
+            </p>
+        </header>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-section" id="countdownSection">
+            <h3 class="countdown-title">Time Until Your Special Day</h3>
+            <div class="countdown-timer" id="countdown">
+                <div class="time-box">
+                    <div class="time-value" id="days">00</div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-value" id="hours">00</div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-value" id="minutes">00</div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-box">
+                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Reached Message -->
+        <div class="birthday-reached" id="birthdayReached" style="display: none;">
+            <h2 class="celebration-text">🎂 It's Your Birthday! 🎂</h2>
+            <p class="celebration-subtext">Let's celebrate this amazing day!</p>
+        </div>
+
+        <!-- Birthday Cake -->
+        <div class="cake-section">
+            <div class="cake-container">
+                <!-- Cake Base -->
+                <div class="cake">
+                    <div class="cake-layer layer-3">
+                        <div class="frosting-detail"></div>
+                    </div>
+                    <div class="cake-layer layer-2">
+                        <div class="frosting-detail"></div>
+                    </div>
+                    <div class="cake-layer layer-1">
+                        <div class="frosting-detail"></div>
+                    </div>
+                    
+                    <!-- Candles -->
+                    <div class="candles">
+                        <div class="candle">
+                            <div class="flame">
+                                <div class="flame-inner"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame">
+                                <div class="flame-inner"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame">
+                                <div class="flame-inner"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cake Plate -->
+                    <div class="cake-plate"></div>
+                </div>
+
+                <!-- Knife (Hidden initially) -->
+                <div class="knife" id="knife">
+                    <div class="knife-blade"></div>
+                    <div class="knife-handle"></div>
+                </div>
+            </div>
+
+            <button class="cake-button" id="cakeBtn">
+                <span>🔪 Cut the Cake 🎂</span>
+            </button>
+        </div>
+
+        <!-- Surprise Button -->
+        <div class="surprise-section">
+            <button class="surprise-button" id="surpriseBtn">
+                <span>🎁 Click for Surprise 🎁</span>
+            </button>
+            
+            <!-- Hidden Wish (Revealed on click) -->
+            <div class="hidden-wish" id="hiddenWish">
+                <div class="wish-card">
+                    <h3>💝 Special Birthday Wish 💝</h3>
+                    <p>
+                        On this special day, I want you to know how amazing you are! 
+                        Your kindness, smile, and positive energy light up every room. 
+                        May this year bring you endless joy, success, and beautiful memories. 
+                        Here's to another year of being absolutely wonderful! 
+                        Cheers to you! 🥂✨
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
